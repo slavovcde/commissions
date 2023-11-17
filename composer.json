@@ -1,0 +1,33 @@
+{
+    "name": "funds/commissions",
+    "description": "Calculation app for fees of the client's operations",
+    "autoload": {
+        "psr-4": {
+            "Funds\\Commissions\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "slavovcde"
+        }
+    ],
+    "require": {
+        "php": ">=7.0",
+        "ext-bcmath": "*",
+        "parsecsv/php-parsecsv": "^1.3"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^10.4",
+        "friendsofphp/php-cs-fixer": "3.38"
+    },
+    "config": {
+        "sort-packages": true,
+        "bin-dir": "bin"
+    },
+    "scripts": {
+        "phpunit": "phpunit",
+        "fix-cs": "php-cs-fixer fix",
+        "test-cs": "php-cs-fixer fix --dry-run -v",
+        "test": ["@phpunit", "@test-cs"]
+    }
+}
